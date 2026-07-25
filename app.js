@@ -1,19 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
   const botonEntrar = document.getElementById("botonEntrar");
+  const botonComenzar = document.getElementById("botonComenzar");
+
   const escenaInicio = document.getElementById("escenaInicio");
   const pantallaTransicion = document.getElementById("pantallaTransicion");
   const escenaDorian = document.getElementById("escenaDorian");
+  const escenaDashboard = document.getElementById("escenaDashboard");
 
   if (
     !botonEntrar ||
+    !botonComenzar ||
     !escenaInicio ||
     !pantallaTransicion ||
-    !escenaDorian
+    !escenaDorian ||
+    !escenaDashboard
   ) {
     console.error("Falta algún elemento necesario en el HTML.");
     return;
   }
 
+  /* PORTADA → DORIAN */
   botonEntrar.addEventListener("click", () => {
     escenaInicio.style.display = "none";
 
@@ -28,25 +34,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "auto"
       });
     }, 2500);
   });
-});
-const botonComenzar = document.getElementById("botonComenzar");
-const escenaDashboard = document.getElementById("escenaDashboard");
 
-if (botonComenzar && escenaDashboard) {
+  /* DORIAN → DASHBOARD */
   botonComenzar.addEventListener("click", () => {
     escenaDorian.classList.remove("activa");
     escenaDorian.style.display = "none";
 
     escenaDashboard.hidden = false;
     escenaDashboard.classList.add("activa");
+    escenaDashboard.style.display = "block";
 
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "auto"
     });
   });
-}
+});
