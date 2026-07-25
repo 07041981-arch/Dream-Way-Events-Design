@@ -1,42 +1,35 @@
-const botonEntrar = document.getElementById("botonEntrar");
-const escenaInicio = document.getElementById("escenaInicio");
-const pantallaTransicion = document.getElementById("pantallaTransicion");
-const escenaDorian = document.getElementById("escenaDorian");
+document.addEventListener("DOMContentLoaded", () => {
+  const botonEntrar = document.getElementById("botonEntrar");
+  const escenaInicio = document.getElementById("escenaInicio");
+  const pantallaTransicion = document.getElementById("pantallaTransicion");
+  const escenaDorian = document.getElementById("escenaDorian");
 
-botonEntrar.addEventListener("click", () => {
+  if (
+    !botonEntrar ||
+    !escenaInicio ||
+    !pantallaTransicion ||
+    !escenaDorian
+  ) {
+    console.error("Falta algún elemento necesario en el HTML.");
+    return;
+  }
 
-  escenaInicio.style.display = "none";
+  botonEntrar.addEventListener("click", () => {
+    escenaInicio.style.display = "none";
 
-  pantallaTransicion.style.display = "flex";
+    pantallaTransicion.style.display = "flex";
+    pantallaTransicion.setAttribute("aria-hidden", "false");
 
-  setTimeout(() => {
+    setTimeout(() => {
+      pantallaTransicion.style.display = "none";
+      pantallaTransicion.setAttribute("aria-hidden", "true");
 
-    pantallaTransicion.style.display = "none";
+      escenaDorian.classList.add("activa");
 
-    escenaDorian.style.display = "flex";
-
-  }, 2500);
-
-});
-const botonEntrar = document.getElementById("botonEntrar");
-const escenaInicio = document.getElementById("escenaInicio");
-const pantallaTransicion = document.getElementById("pantallaTransicion");
-const escenaDorian = document.getElementById("escenaDorian");
-
-botonEntrar.addEventListener("click", () => {
-  escenaInicio.style.display = "none";
-
-  pantallaTransicion.style.display = "flex";
-  pantallaTransicion.setAttribute("aria-hidden", "false");
-
-  setTimeout(() => {
-    pantallaTransicion.style.display = "none";
-    pantallaTransicion.setAttribute("aria-hidden", "true");
-
-    escenaDorian.classList.add("activa");
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }, 2500);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }, 2500);
+  });
 });
