@@ -33,3 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2500);
   });
 });
+const botonComenzar = document.getElementById("botonComenzar");
+const escenaDashboard = document.getElementById("escenaDashboard");
+
+botonComenzar.addEventListener("click", () => {
+
+    escenaDorian.classList.remove("activa");
+
+    escenaDashboard.classList.add("activa");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
