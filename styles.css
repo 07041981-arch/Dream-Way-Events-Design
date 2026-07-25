@@ -303,14 +303,8 @@ h1 {
   }
 }
 .logo-horizontal{
-    display:block;
     width:min(1000px,95%);
     height:auto;
+    display:block;
     margin:0 auto 50px;
-}
-
-@media (max-width:768px){
-    .logo-horizontal{
-        width:95%;
-    }
 }
