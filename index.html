@@ -20,7 +20,8 @@
 
 <body>
 
-  <main class="landing">
+  <!-- ESCENA 1: LANDING PRINCIPAL -->
+  <main id="escenaInicio" class="escena escena-activa landing">
 
     <div class="resplandor"></div>
 
@@ -54,6 +55,82 @@
         type="button"
       >
         Entrar en el estudio
+      </button>
+
+    </section>
+
+    <footer class="firma">
+      Dream Way Events Studios
+      <span>·</span>
+      Produciendo recuerdos inolvidables
+    </footer>
+
+  </main>
+
+
+  <!-- TRANSICIÓN CINEMATOGRÁFICA -->
+  <section
+    id="pantallaTransicion"
+    class="pantalla-transicion"
+    aria-hidden="true"
+  >
+    <div class="claqueta-transicion">DW</div>
+
+    <p>Preparando vuestra producción...</p>
+  </section>
+
+
+  <!-- ESCENA 2: BIENVENIDA DE DORIAN -->
+  <main id="escenaDorian" class="escena escena-dorian">
+
+    <div class="resplandor resplandor-dorian"></div>
+
+    <section class="contenido-dorian">
+
+      <p class="etiqueta-escena">
+        Dirección de Producción
+      </p>
+
+      <div class="identidad-dorian">
+        <span class="inicial-dorian">D</span>
+
+        <div>
+          <span class="cargo-dorian">
+            Director de Producción
+          </span>
+
+          <h2>Dorian</h2>
+        </div>
+      </div>
+
+      <div class="mensaje-dorian">
+
+        <p>Hola.</p>
+
+        <p>
+          Soy Dorian y, a partir de este momento,
+          seré vuestro Director de Producción.
+        </p>
+
+        <p>
+          Mi trabajo consiste en que podáis disfrutar
+          vuestra boda con la tranquilidad de saber que
+          cada detalle está siendo cuidadosamente dirigido.
+        </p>
+
+        <blockquote>
+          Vosotros viviréis la historia.<br>
+          Dream Way Events dirigirá la producción.
+        </blockquote>
+
+      </div>
+
+      <button
+        id="botonComenzar"
+        class="boton-principal"
+        type="button"
+      >
+        Comenzar la producción
       </button>
 
     </section>
