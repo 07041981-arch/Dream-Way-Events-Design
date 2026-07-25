@@ -308,3 +308,13 @@ h1 {
     display:block;
     margin:0 auto 50px;
 }
+.pantalla-transicion{
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.escena-dorian{
+    display:none;
+}
