@@ -36,15 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
 const botonComenzar = document.getElementById("botonComenzar");
 const escenaDashboard = document.getElementById("escenaDashboard");
 
-botonComenzar.addEventListener("click", () => {
-
+if (botonComenzar && escenaDashboard) {
+  botonComenzar.addEventListener("click", () => {
     escenaDorian.classList.remove("activa");
+    escenaDorian.style.display = "none";
 
+    escenaDashboard.hidden = false;
     escenaDashboard.classList.add("activa");
 
     window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+      top: 0,
+      behavior: "smooth"
     });
-
-});
+  });
+}
